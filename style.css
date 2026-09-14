@@ -937,21 +937,25 @@ button {
    ========================================================= */
 
 .mural {
-    width: 100%;
+    position: relative;
     min-height: 680px;
     background: var(--azul);
     color: white;
     padding: 65px 70px;
-    text-align: center;
     overflow: hidden;
 }
 
 .mural h2 {
+    position: absolute;
+    top: 65px;
+    left: 70px;
+    margin: 0;
     font-size: 39px;
-    margin-bottom: 40px;
+    text-align: left;
 }
 
 .mural-conteudo {
+    min-height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -977,7 +981,7 @@ button {
 .cartao-texto {
     width: 100%;
     min-height: 220px;
-    background: var(--azul-claro);
+    background: #dcecf4;
     border-radius: 8px;
     padding: 40px;
     box-sizing: border-box;
@@ -985,6 +989,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .cartao-texto h3 {
@@ -1033,6 +1038,7 @@ button {
     background: #526f7d;
     transform: scale(1.15);
 }
+
 
 /* =========================================================
    FOOTER
@@ -1160,9 +1166,6 @@ button {
     }
 
 
-    .mural-card {
-        width: 65%;
-    }
 }
 
 
@@ -1341,12 +1344,6 @@ button {
         min-height: 650px;
 
         padding: 50px 35px;
-    }
-
-    .mural-card {
-        width: 75%;
-
-        right: 30px;
     }
 
 
@@ -1549,19 +1546,181 @@ button {
     }
 
 
-  
+  /* =====================================================
+   MURAL
+   ===================================================== */
+
+.mural {
+    width: 100%;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.mural h2 {
+    margin-bottom: 40px;
+}
+
+.mural-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Cartão do mural */
+.cartao-mural {
+    width: min(700px, 90%);
+    min-height: 280px;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+    transform: rotate(-1deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+/* Área da mensagem */
+.cartao-texto {
+    width: 100%;
+    min-height: 220px;
+
+    background: #dcecf4;
+
+    border-radius: 8px;
+
+    padding: 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nome do integrante */
+.cartao-texto h3 {
+    margin: 0 0 20px;
+
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    color: #111111;
+}
+
+/* Frase */
+.cartao-texto p {
+    margin: 0;
+
+    max-width: 550px;
+
+    font-size: 1.15rem;
+    line-height: 1.6;
+
+    color: #333333;
+}
+
+/* Animação durante a troca */
+.cartao-mural.trocando {
+    opacity: 0;
+    transform: translateY(10px) rotate(-1deg);
+}
+
+/* Controles */
+.mural-controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Pontinhos */
+.ponto {
+    width: 10px;
+    height: 10px;
+
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+
+    background: #b8cbd4;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.ponto:hover {
+    transform: scale(1.2);
+}
+
+.ponto.ativo {
+    background: #526f7d;
+    transform: scale(1.15);
+}
+
+
+/* =====================================================
+   MURAL — RESPONSIVO
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    .mural {
+        padding: 60px 15px;
+    }
+
+    .cartao-mural {
+        width: 92%;
+        min-height: 240px;
+    }
+
+    .cartao-texto {
+        min-height: 190px;
+        padding: 25px 20px;
+    }
+
+    .cartao-texto h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .cartao-texto p {
+        font-size: 1rem;
+    }
+
+}
 
 
     /* Mural */
-
     .mural {
-        min-height: auto;
-        padding: 50px 20px 60px;
+        min-height: 560px;
+        padding: 45px 15px;
     }
 
     .mural h2 {
-        font-size: 29px;
-        margin-bottom: 30px;
+        top: 45px;
+        left: 20px;
+        font-size: 30px;
+    }
+
+    .mural-conteudo {
+        min-height: 470px;
+        padding-top: 55px;
     }
 
     .cartao-mural {
