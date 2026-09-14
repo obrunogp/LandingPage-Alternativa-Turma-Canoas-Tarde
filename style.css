@@ -937,110 +937,102 @@ button {
    ========================================================= */
 
 .mural {
-    position: relative;
-
+    width: 100%;
     min-height: 680px;
-
     background: var(--azul);
-
     color: white;
-
     padding: 65px 70px;
-
+    text-align: center;
     overflow: hidden;
 }
 
-
-/* Título */
-
 .mural h2 {
     font-size: 39px;
-
-    margin-bottom: 170px;
+    margin-bottom: 40px;
 }
 
-
-/* Pontos */
-
-.mural-dots {
-    position: absolute;
-
-    left: 90px;
-    top: 340px;
-
+.mural-conteudo {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
 
+.cartao-mural {
+    width: min(700px, 90%);
+    min-height: 280px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    transform: rotate(-1deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.cartao-texto {
+    width: 100%;
+    min-height: 220px;
+    background: var(--azul-claro);
+    border-radius: 8px;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartao-texto h3 {
+    margin: 0 0 20px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111111;
+}
+
+.cartao-texto p {
+    margin: 0;
+    max-width: 550px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.cartao-mural.trocando {
+    opacity: 0;
+    transform: translateY(10px) rotate(-1deg);
+}
+
+.mural-controles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 8px;
 }
 
-
-.mural-dots span {
-    font-family: Arial, sans-serif;
-
-    font-size: 22px;
+.ponto {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #b8cbd4;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-
-/* =========================================================
-   CARTÃO DO MURAL
-   ========================================================= */
-
-.mural-card {
-    position: absolute;
-
-    right: 55px;
-    top: 280px;
-
-    width: min(63%, 970px);
-
-    height: 310px;
-
-    background: white;
-
-    border-radius: 28px;
-
-    transform: rotate(-4deg);
-
-    box-shadow:
-        5px 6px 5px rgba(0, 0, 0, 0.18);
+.ponto:hover {
+    transform: scale(1.2);
 }
 
-
-/* Mensagem */
-
-.mural-message {
-    position: absolute;
-
-    left: 8px;
-    right: 8px;
-
-    bottom: 0;
-
-    height: 155px;
-
-    background: var(--azul-claro);
-
-    border-radius: 25px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 30px;
+.ponto.ativo {
+    background: #526f7d;
+    transform: scale(1.15);
 }
-
-
-/* Texto */
-
-.mural-message p {
-    font-size: 18px;
-
-    font-weight: bold;
-
-    text-align: center;
-}
-
 
 /* =========================================================
    FOOTER
@@ -1557,61 +1549,38 @@ button {
     }
 
 
+  
+
+
     /* Mural */
 
     .mural {
-        min-height: 550px;
-
-        padding: 40px 25px;
+        min-height: auto;
+        padding: 50px 20px 60px;
     }
 
     .mural h2 {
-        font-size: 30px;
-
-        margin-bottom: 100px;
+        font-size: 29px;
+        margin-bottom: 30px;
     }
 
-    .mural-dots {
-        left: 35px;
-        top: 220px;
+    .cartao-mural {
+        width: 92%;
+        min-height: 240px;
     }
 
-    .mural-card {
-        top: 230px;
-        right: 20px;
-
-        width: 85%;
-
-        height: 250px;
-    }
-
-    .mural-message {
-        height: 125px;
-    }
-
-    .mural-message p {
-        font-size: 13px;
-    }
-
-
-    /* Footer */
-
-    .footer {
-        min-height: 100px;
-
+    .cartao-texto {
+        min-height: 190px;
         padding: 25px 20px;
-
-        flex-direction: column;
-
-        gap: 20px;
-
-        text-align: center;
-
-        font-size: 12px;
     }
 
-    .footer-links {
-        gap: 20px;
+    .cartao-texto h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .cartao-texto p {
+        font-size: 1rem;
     }
 
 }

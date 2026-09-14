@@ -487,4 +487,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderizarEquipe();
 
+
+    // ===============================
+// MURAL - FRASES
+// ===============================
+
+const integrantes = [
+    {
+        nome: "Bruno Garcia",
+        frase: "Transformando a curiosidade em código."
+    },
+    {
+        nome: "Integrante 2",
+        frase: "Aprendendo algo novo todos os dias."
+    },
+    {
+        nome: "Integrante 3",
+        frase: "Do algoritmo para a solução."
+    },
+
+    // ... continuar até os 22 integrantes
+];
+
+let integranteAtual = 0;
+
+const nomeIntegrante = document.getElementById("nome-integrante");
+const fraseIntegrante = document.getElementById("frase-integrante");
+
+function trocarIntegrante() {
+
+    const cartao = document.querySelector(".cartao-mural");
+
+    cartao.classList.add("trocando");
+
+    setTimeout(() => {
+
+        integranteAtual++;
+
+        if (integranteAtual >= integrantes.length) {
+            integranteAtual = 0;
+        }
+
+        nomeIntegrante.textContent = integrantes[integranteAtual].nome;
+        fraseIntegrante.textContent =
+            `"${integrantes[integranteAtual].frase}"`;
+
+        cartao.classList.remove("trocando");
+
+    }, 500);
+}
+
+setInterval(trocarIntegrante, 4000);
 });
