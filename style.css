@@ -1,0 +1,1617 @@
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Courier New", monospace;
+    background: #f7f4f2;
+    color: #111;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   CORES
+   ========================================================= */
+
+:root {
+    --azul: #08a8d1;
+    --azul-claro: #8cccf2;
+    --azul-filtro: #79bdd6;
+    --fundo: #f7f4f2;
+    --branco: #ffffff;
+    --cinza: #777777;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    height: 120px;
+
+    background: var(--azul);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 65px;
+
+    color: white;
+}
+
+
+/* Logo + nome */
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+
+/* Símbolo */
+
+.logo {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    font-size: 31px;
+    font-weight: bold;
+
+    border: 4px solid white;
+}
+
+
+/* Nome */
+
+.logo-area span {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+/* Menu */
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    gap: 48px;
+
+    font-size: 19px;
+}
+
+.menu a {
+    transition: opacity 0.2s ease;
+}
+
+.menu a:hover {
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 840px;
+
+    background: var(--fundo);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(500px, 1fr);
+
+    align-items: center;
+
+    gap: 55px;
+
+    padding: 70px 65px 85px;
+
+    border-bottom: 3px solid var(--azul);
+}
+
+
+/* Texto */
+
+.hero-text {
+    max-width: 720px;
+}
+
+.hero-text h1 {
+    margin-bottom: 32px;
+
+    font-size: 40px;
+    line-height: 1.2;
+
+    font-weight: bold;
+}
+
+
+/* Descrição */
+
+.hero-description {
+    max-width: 700px;
+}
+
+.hero-description p {
+    margin-bottom: 27px;
+
+    font-size: 20px;
+    line-height: 1.6;
+
+    text-align: justify;
+}
+
+.hero-description strong {
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   FOTO DO HERO
+   ========================================================= */
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Moldura */
+
+.image-card {
+    width: min(100%, 700px);
+
+    background: white;
+
+    padding: 17px 17px 19px;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Foto */
+
+.image-card img {
+    display: block;
+
+    width: 100%;
+    height: 495px;
+
+    object-fit: cover;
+}
+
+
+/* Legenda */
+
+.image-card p {
+    padding-top: 20px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   QUEM SOMOS
+   ========================================================= */
+
+.quem-somos {
+    min-height: 850px;
+
+    background: var(--azul);
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(500px, 1fr)
+        minmax(500px, 1fr);
+
+    gap: 65px;
+
+    padding: 65px 50px;
+
+    color: white;
+}
+
+
+/* =========================================================
+   FOTO — QUEM SOMOS
+   ========================================================= */
+
+.quem-somos-image {
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* Moldura da foto */
+
+.photo-card {
+    width: min(100%, 650px);
+
+    background: white;
+
+    padding: 38px 27px 88px;
+
+    border-radius: 5px;
+
+    box-shadow:
+        7px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Foto */
+
+.photo-card img {
+    display: block;
+
+    width: 100%;
+    height: 420px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   CONTEÚDO — QUEM SOMOS
+   ========================================================= */
+
+.quem-somos-content {
+    padding-top: 0;
+
+    max-width: 700px;
+}
+
+
+.quem-somos-content h2 {
+    margin-bottom: 22px;
+
+    font-size: 39px;
+    line-height: 1.2;
+
+    font-weight: bold;
+}
+
+
+.quem-somos-content > p {
+    margin-bottom: 35px;
+
+    font-size: 18px;
+    line-height: 1.65;
+
+    text-align: justify;
+}
+
+
+/* =========================================================
+   MENTORES
+   ========================================================= */
+
+.quem-somos-content h3 {
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    font-size: 31px;
+}
+
+
+/* Caixa dos mentores */
+
+.mentores {
+    width: 100%;
+
+    min-height: 220px;
+
+    background: white;
+
+    color: #111;
+
+    border-radius: 30px;
+
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 25px 35px;
+}
+
+
+/* Mentor individual */
+
+.mentor {
+    min-width: 150px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* Foto mentor */
+
+.mentor img {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    margin-bottom: 9px;
+}
+
+
+/* Nome */
+
+.mentor strong {
+    font-size: 18px;
+
+    margin-bottom: 3px;
+}
+
+
+/* Área */
+
+.mentor small {
+    font-size: 16px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   EQUIPE
+   ========================================================= */
+
+.equipe {
+    background: var(--fundo);
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+/* Cabeçalho */
+
+.equipe-header {
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 12px 24px;
+
+    gap: 120px;
+}
+
+
+/* Título Equipe */
+
+.equipe-header .section-title {
+    width: 215px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--azul);
+
+    color: white;
+
+    border-radius: 9px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Filtros */
+
+.filtros {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 23px;
+}
+
+
+/* Botões */
+
+.filtro {
+    width: 175px;
+    height: 36px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    background: var(--azul-filtro);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.filtro:hover {
+    transform: translateY(-1px);
+}
+
+
+.filtro.ativo {
+    background: #0798cf;
+}
+
+
+/* =========================================================
+   CARROSSEL
+   ========================================================= */
+
+.carousel-container {
+    position: relative;
+
+    width: 100%;
+
+    height: 315px;
+
+    display: flex;
+
+    align-items: center;
+
+    background: var(--azul);
+
+    overflow: hidden;
+}
+
+
+/* Área visível */
+
+.carousel {
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+/* Linha dos cards */
+
+.cards-equipe {
+    display: flex;
+
+    align-items: center;
+
+    gap: 100px;
+
+    width: max-content;
+
+    height: 100%;
+
+    padding: 15px 65px;
+
+    transition:
+        transform 0.45s ease;
+}
+
+
+/* =========================================================
+   CARD DA EQUIPE
+   ========================================================= */
+
+.card-pessoa {
+    flex: 0 0 375px;
+
+    width: 375px;
+    height: 285px;
+
+    background: var(--fundo);
+
+    border: 6px solid white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Imagem */
+
+.card-pessoa img {
+    display: block;
+
+    width: calc(100% - 12px);
+
+    height: 205px;
+
+    margin: 6px;
+
+    border-radius: 13px;
+
+    object-fit: contain;
+
+    background: #e5e5e5;
+}
+
+
+/* Informações */
+
+.card-pessoa div {
+    padding: 7px 18px;
+}
+
+
+/* Nome */
+
+.card-pessoa strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 17px;
+
+    font-weight: normal;
+}
+
+
+/* Área */
+
+.card-pessoa small {
+    display: block;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* =========================================================
+   BOTÕES DO CARROSSEL
+   ========================================================= */
+
+.carousel-btn {
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 10;
+
+    width: 55px;
+    height: 55px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: var(--azul);
+
+    color: white;
+
+    font-size: 31px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+.carousel-btn.prev {
+    left: 15px;
+}
+
+
+.carousel-btn.next {
+    right: 15px;
+}
+
+
+.carousel-btn:disabled {
+    opacity: 0.25;
+
+    cursor: default;
+}
+
+
+/* =========================================================
+   LINHA DO TEMPO
+   ========================================================= */
+
+.linha-do-tempo {
+    position: relative;
+
+    min-height: 600px;
+
+    background: var(--fundo);
+
+    padding: 25px 32px 45px;
+}
+
+
+/* Título */
+
+.linha-do-tempo > .section-title {
+    width: 250px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--azul);
+
+    color: white;
+
+    border-radius: 9px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   ÁREA DA TIMELINE
+   ========================================================= */
+
+.timeline {
+    position: relative;
+
+    width: min(100%, 1200px);
+
+    height: 440px;
+
+    margin: 15px auto 0;
+
+    background: white;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 4px 7px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Linha central */
+
+.timeline-line {
+    position: absolute;
+
+    top: 50%;
+    left: 3%;
+
+    width: 94%;
+    height: 15px;
+
+    transform: translateY(-50%);
+
+    background: #d1d1d1;
+
+    border-radius: 10px;
+}
+
+
+/* Linha pontilhada */
+
+.timeline-line::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 5px;
+
+    width: 100%;
+    height: 3px;
+
+    background: repeating-linear-gradient(
+        to right,
+        white 0,
+        white 15px,
+        transparent 15px,
+        transparent 28px
+    );
+}
+
+
+/* =========================================================
+   ITENS DA TIMELINE
+   ========================================================= */
+
+.timeline-item {
+    position: absolute;
+
+    width: 285px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+/* Item superior */
+
+.item-01 {
+    left: 5%;
+    top: 30px;
+}
+
+
+.item-03 {
+    left: 51%;
+    top: 30px;
+}
+
+
+/* Item inferior */
+
+.item-02 {
+    left: 28%;
+    top: 215px;
+}
+
+
+.item-04 {
+    right: 5%;
+    top: 215px;
+}
+
+
+/* =========================================================
+   CARDS DA TIMELINE
+   ========================================================= */
+
+.timeline-card {
+    width: 285px;
+    min-height: 105px;
+
+    display: flex;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    background: white;
+
+    border: 1px solid #e1e1e1;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Número */
+
+.timeline-number {
+    color: var(--azul);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    padding-right: 10px;
+
+    border-right: 1px solid #c7c7c7;
+}
+
+
+/* Texto */
+
+.timeline-card p {
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    color: #222;
+}
+
+
+/* =========================================================
+   ÍCONES
+   ========================================================= */
+
+.timeline-icon {
+    width: 60px;
+    height: 60px;
+
+    margin-top: 7px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: var(--azul);
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   MURAL
+   ========================================================= */
+
+.mural {
+    position: relative;
+
+    min-height: 680px;
+
+    background: var(--azul);
+
+    color: white;
+
+    padding: 65px 70px;
+
+    overflow: hidden;
+}
+
+
+/* Título */
+
+.mural h2 {
+    font-size: 39px;
+
+    margin-bottom: 170px;
+}
+
+
+/* Pontos */
+
+.mural-dots {
+    position: absolute;
+
+    left: 90px;
+    top: 340px;
+
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.mural-dots span {
+    font-family: Arial, sans-serif;
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   CARTÃO DO MURAL
+   ========================================================= */
+
+.mural-card {
+    position: absolute;
+
+    right: 55px;
+    top: 280px;
+
+    width: min(63%, 970px);
+
+    height: 310px;
+
+    background: white;
+
+    border-radius: 28px;
+
+    transform: rotate(-4deg);
+
+    box-shadow:
+        5px 6px 5px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Mensagem */
+
+.mural-message {
+    position: absolute;
+
+    left: 8px;
+    right: 8px;
+
+    bottom: 0;
+
+    height: 155px;
+
+    background: var(--azul-claro);
+
+    border-radius: 25px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+/* Texto */
+
+.mural-message p {
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    min-height: 120px;
+
+    background: var(--fundo);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 120px;
+
+    border-top: 3px solid #ddd;
+
+    color: #666;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+/* Links */
+
+.footer-links {
+    display: flex;
+
+    gap: 45px;
+}
+
+
+.footer-links a:hover {
+    color: #111;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+
+/* =========================================================
+   ATÉ 1200px
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .header {
+        padding: 0 35px;
+    }
+
+    .logo-area {
+        gap: 30px;
+    }
+
+    .menu {
+        gap: 25px;
+        font-size: 16px;
+    }
+
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+
+        padding: 60px 40px;
+    }
+
+    .hero-text h1 {
+        font-size: 34px;
+    }
+
+    .hero-description p {
+        font-size: 17px;
+    }
+
+
+    .image-card img {
+        height: 390px;
+    }
+
+
+    .quem-somos {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 35px;
+
+        padding: 50px 35px;
+    }
+
+    .quem-somos-content h2 {
+        font-size: 32px;
+    }
+
+    .quem-somos-content > p {
+        font-size: 15px;
+    }
+
+
+    .equipe-header {
+        gap: 40px;
+    }
+
+    .filtros {
+        gap: 12px;
+    }
+
+    .filtro {
+        width: 145px;
+    }
+
+
+    .cards-equipe {
+        gap: 65px;
+    }
+
+    .card-pessoa {
+        flex-basis: 330px;
+        width: 330px;
+    }
+
+
+    .mural-card {
+        width: 65%;
+    }
+}
+
+
+/* =========================================================
+   ATÉ 900px
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    /* Header */
+
+    .header {
+        height: auto;
+
+        min-height: 100px;
+
+        padding: 20px 25px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .logo-area {
+        gap: 25px;
+    }
+
+    .menu {
+        gap: 25px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding: 55px 30px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-description p {
+        font-size: 17px;
+    }
+
+
+    .hero-image {
+        margin-top: 20px;
+    }
+
+
+    /* Quem somos */
+
+    .quem-somos {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding: 50px 30px;
+    }
+
+    .quem-somos-content {
+        max-width: 100%;
+    }
+
+    .quem-somos-content h2 {
+        font-size: 34px;
+    }
+
+    .quem-somos-content > p {
+        font-size: 16px;
+    }
+
+
+    /* Equipe */
+
+    .equipe-header {
+        height: auto;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    .filtros {
+        flex-wrap: wrap;
+    }
+
+
+    .cards-equipe {
+        gap: 35px;
+
+        padding-left: 45px;
+    }
+
+    .card-pessoa {
+        flex-basis: 310px;
+
+        width: 310px;
+    }
+
+
+    /* Timeline */
+
+    .timeline {
+        height: auto;
+
+        min-height: 800px;
+    }
+
+    .timeline-line {
+        left: 50%;
+
+        top: 40px;
+
+        width: 12px;
+        height: 720px;
+
+        transform: translateX(-50%);
+    }
+
+    .timeline-line::after {
+        width: 3px;
+        height: 100%;
+
+        left: 4px;
+        top: 0;
+
+        background: repeating-linear-gradient(
+            to bottom,
+            white 0,
+            white 12px,
+            transparent 12px,
+            transparent 24px
+        );
+    }
+
+    .timeline-item {
+        position: relative;
+
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+
+        width: 100%;
+
+        margin-bottom: 35px;
+
+        padding: 0 20px;
+    }
+
+
+    .timeline-item:nth-child(odd) {
+        align-items: flex-start;
+    }
+
+    .timeline-item:nth-child(even) {
+        align-items: flex-end;
+    }
+
+
+    /* Mural */
+
+    .mural {
+        min-height: 650px;
+
+        padding: 50px 35px;
+    }
+
+    .mural-card {
+        width: 75%;
+
+        right: 30px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        padding: 30px 40px;
+
+        font-size: 14px;
+    }
+
+    .footer-links {
+        gap: 25px;
+    }
+}
+
+
+/* =========================================================
+   ATÉ 600px
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    /* Header */
+
+    .header {
+        min-height: 130px;
+
+        padding: 18px 15px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+
+        font-size: 23px;
+    }
+
+    .logo-area span {
+        font-size: 16px;
+    }
+
+    .menu {
+        gap: 15px;
+
+        font-size: 13px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 29px;
+    }
+
+    .hero-description p {
+        font-size: 15px;
+
+        line-height: 1.55;
+    }
+
+
+    .image-card {
+        padding: 10px;
+    }
+
+    .image-card img {
+        height: 280px;
+    }
+
+    .image-card p {
+        font-size: 12px;
+    }
+
+
+    /* Quem somos */
+
+    .quem-somos {
+        padding: 35px 20px;
+    }
+
+    .photo-card {
+        padding: 20px 15px 45px;
+    }
+
+    .photo-card img {
+        height: 280px;
+    }
+
+    .quem-somos-content h2 {
+        font-size: 29px;
+    }
+
+    .quem-somos-content > p {
+        font-size: 14px;
+
+        line-height: 1.55;
+    }
+
+
+    .quem-somos-content h3 {
+        font-size: 25px;
+    }
+
+
+    .mentores {
+        min-height: 170px;
+
+        padding: 15px 8px;
+
+        border-radius: 22px;
+    }
+
+    .mentor {
+        min-width: 90px;
+    }
+
+    .mentor img {
+        width: 75px;
+        height: 75px;
+    }
+
+    .mentor strong {
+        font-size: 13px;
+    }
+
+    .mentor small {
+        font-size: 11px;
+    }
+
+
+    /* Equipe */
+
+    .equipe-header .section-title {
+        width: 160px;
+        height: 45px;
+
+        font-size: 20px;
+    }
+
+    .filtro {
+        width: 110px;
+        height: 32px;
+
+        font-size: 12px;
+    }
+
+
+    .carousel-container {
+        height: 300px;
+    }
+
+    .cards-equipe {
+        gap: 20px;
+
+        padding-left: 35px;
+    }
+
+    .card-pessoa {
+        flex-basis: 280px;
+
+        width: 280px;
+        height: 270px;
+    }
+
+    .card-pessoa img {
+        height: 195px;
+    }
+
+
+    /* Timeline */
+
+    .linha-do-tempo {
+        padding: 20px 15px;
+    }
+
+    .linha-do-tempo > .section-title {
+        width: 210px;
+        height: 48px;
+
+        font-size: 20px;
+    }
+
+    .timeline {
+        margin-top: 15px;
+
+        min-height: 900px;
+    }
+
+    .timeline-card {
+        width: 220px;
+    }
+
+    .timeline-card p {
+        font-size: 12px;
+    }
+
+
+    /* Mural */
+
+    .mural {
+        min-height: 550px;
+
+        padding: 40px 25px;
+    }
+
+    .mural h2 {
+        font-size: 30px;
+
+        margin-bottom: 100px;
+    }
+
+    .mural-dots {
+        left: 35px;
+        top: 220px;
+    }
+
+    .mural-card {
+        top: 230px;
+        right: 20px;
+
+        width: 85%;
+
+        height: 250px;
+    }
+
+    .mural-message {
+        height: 125px;
+    }
+
+    .mural-message p {
+        font-size: 13px;
+    }
+
+
+    /* Footer */
+
+    .footer {
+        min-height: 100px;
+
+        padding: 25px 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+
+        font-size: 12px;
+    }
+
+    .footer-links {
+        gap: 20px;
+    }
+
+}
